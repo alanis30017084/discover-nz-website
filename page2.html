@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>page2.html</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
+</head>
+
+<body>
+  <div class ="header"><header><h1 id="header">DISCOVER NZ</h1></header></div>
+  <div class ="navbar">
+      <a href="index.html">Home</a>
+      <a class ="active" href="page2.html">Destinations</a>
+      <a href="page3.html">Information</a>
+      <a href="page4.html">Videos</a>
+      <a href="page5.html">Gallery</a>
+      <a href="page6.html">About</a>
+      <a href="page7.html">References</a>
+  </div>
+  <div class ="block"><br></div>
+
+    
+  <div class="blackcontent">
+  <div class="slideshow-container">
+    <div class="mySlides fade"><img src="images/mtruapehu.jpg" style="width:100%;">
+    <div class="text">Tongariro Alpine Crossing, Mount Ruapehu</div></div>
+      
+    <div class="mySlides fade"><img src="images/hobbiton2.jpg" style="width:100%">
+    <div class="text">Hobbiton Move Set, Matamata</div></div>
+      
+    <div class="mySlides fade"><img src="images/waitomo-caves.jpg" style="width:100%;">
+    <div class="text">Glow Worm Caves, Waitomo</div></div>
+
+    <div class="mySlides fade"><img src="images/gallery1.jpg" style="width:100%;">
+    <div class="text">Fiordland National Park and Milford Sound, South Island</div></div>
+
+    <div class="mySlides fade"><img src="images/gallery2.jpg" style="width:100%;">
+    <div class="text">Bay of Islands, North Island</div></div>
+
+    <div class="mySlides fade"><img src="images/gallery3.jpg" style="width:100%;">
+    <div class="text">Queenstown, South Island</div></div>
+      
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    <br>
+      
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+      <span class="dot" onclick="currentSlide(6)"></span>  
+    </div>
+      
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {showSlides(slideIndex += n);}
+      function currentSlide(n) {showSlides(slideIndex = n);}
+      function showSlides(n)
+      {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {slides[i].style.display = "none";}
+        for (i = 0; i < dots.length; i++) {dots[i].className = dots[i].className.replace(" active", "");}
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
+  </div>
+  </div>  
+
+  <br><br><br><br><br>
+  <div class ="footer">
+    <p>Copyright 2019 Alanis Correa Kriener</p>
+  </div>
+</body>
+
+</html>

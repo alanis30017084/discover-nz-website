@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>page3.html</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
+</head>
+
+<body>
+    <div class ="header"><header><h1 id="header">DISCOVER NZ</h1></header></div>
+    <div class ="navbar">
+        <a href="index.html">Home</a>
+        <a href="page2.html">Destinations</a>
+        <a class ="active" href="page3.html">Information</a>
+        <a href="page4.html">Videos</a>
+        <a href="page5.html">Gallery</a>
+        <a href="page6.html">About</a>
+        <a href="page7.html">References</a>
+    </div>
+    <div class ="block"><br></div>
+<div class ="body">
+
+    <div class ="simplecontent">
+        <p>Click OPEN_FILE to view a selection of 10 different tourist destinations.<br>
+        The table includes information of each destination.</p>
+    </div><br>
+
+<p align="center">
+    </button><button class="btn" onclick="mytable()">OPEN_FILE</button> 
+</p>
+
+<script src="d3.v3.min.js"></script> 
+
+<script type="text/javascript"charset="utf-8"> 
+function mytable() {
+            d3.text("data.csv", function(data) {
+                var parsedCSV = d3.csv.parseRows(data);
+                var container = d3.select("body")
+                    .append("table")
+                    .selectAll("tr")
+                    .data(parsedCSV).enter()
+                    .append("tr")
+                    .selectAll("td")
+                    .data(function(d) { return d; }).enter()
+                    .append("td")
+                    .text(function(d) { return d; });
+            });
+	}
+</script>
+<div class ="footer">
+    <p>Copyright 2019 Alanis Correa Kriener</p>
+</div>
+</body>
+
+</html>

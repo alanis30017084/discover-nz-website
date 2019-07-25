@@ -1,0 +1,236 @@
+#header {
+	border: 3px solid black;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 62px;
+  text-align: center;
+  font-family: 'Economica', sans-serif;
+  color: black;
+}
+.header {
+  width: 90%;
+  margin-left: 5%;
+}
+
+html {
+  background-image: linear-gradient(black,black),url("images/beach1.jpg");
+  background-blend-mode: saturation;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.navbar {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: black;
+  font-family: 'Economica', sans-serif;
+  text-align: center;
+  padding: 14px 16px;
+  box-sizing: border-box
+}
+.navbar a {
+  font-size: 20px;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover:not(.active) {
+  background-color: rgb(61, 61, 61);
+  color: white;
+}
+.navbar a.active {
+  background-color: goldenrod;
+  color: white;
+}
+
+.body {
+  margin: auto;
+}
+.block {
+  background-color: goldenrod;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.content {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: rgba(218, 165, 32, 0.5);
+  color: white;
+  font-family: 'Economica', sans-serif;
+  font-size: 24px;
+  padding: 14px 16px;
+  box-sizing: border-box
+}
+.blackcontent {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: black;
+  color: white;
+  font-family: 'Economica', sans-serif;
+  font-size: 24px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+}
+.subcontent {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: rgba(218, 165, 32, 0.5);
+  color: white;
+  font-family: 'Economica', sans-serif;
+  font-size: 24px;
+  padding: 14px 16px;
+  box-sizing: border-box
+}
+.simplecontent {
+  margin-top: 0%;
+  text-align: center;
+  color: black;
+  font-family: 'Economica', sans-serif;
+  font-size: 35px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  box-sizing: border-box
+}
+
+.footer {
+  position: fixed;
+  font-family: 'Economica', sans-serif;
+  font-size: 18px;
+  left: 7.5%;
+  right: 7.5%;
+  bottom: 0;
+  width: 85%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+/* Page 3 table */
+table {
+  border-collapse: collapse;
+  border: 2px black solid;
+  font-family: 'Economica', sans-serif;
+  color: black;
+  font-size: 24px;
+  width: 80%;  
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  background-color: rgba(255, 255, 255, 0.6);
+                            
+}
+td {
+  border: 1px black solid;
+  padding: 5px;
+  height:20px;
+  }
+tr {
+  text-align:center;
+  padding: 5px;
+}                
+div1 {text-align:center;}
+tr:nth-child(even) {background-color: rgba(255, 255, 255, 0.4);}
+
+.btn {
+  text-align: center;
+  font-family: 'Economica', sans-serif;
+  border: none;
+  background-color: black;
+  color: goldenrod;
+  font-size: 18px;
+  padding: 14px 14px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Page 2 Slideshow */
+.slideshow-container {
+  max-width: 800px;
+  max-height: 900px;
+  position: relative;
+  margin: auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  box-sizing: border-box;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text {
+  color: #f2f2f2;
+  font-size: 20px;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Page 5 Gallery */
+div.gallery {
+  margin: 8px;
+  border: 20px solid black;
+  float: left;
+  width: 180px;
+  height: 120px;
+  background: black;
+}
+div.gallery:hover {
+  border: 20px solid goldenrod;
+  background: goldenrod;
+}
+div.gallery img {
+  height: auto;
+  width: 100%;
+}
